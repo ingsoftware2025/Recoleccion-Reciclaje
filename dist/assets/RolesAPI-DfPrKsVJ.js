@@ -1,0 +1,2 @@
+import{d as a,i as n,g as c}from"./index-BFoY33C2.js";async function i(r){var s,e;try{const o="/api/roles",{data:t}=await a.post(o,r);return t}catch(o){if(n(o))throw new Error(Object.values(((e=(s=o.response)==null?void 0:s.data)==null?void 0:e.errors)||{}).flat().join(`
+`))}}async function u(){try{const r="/api/roles?paginated=",{data:s}=await a.get(r),e=c.safeParse(s);if(e.success)return e.data.data;throw new Error("Error al obtener los roles: "+e.error.errors.map(o=>o.message).join(", "))}catch(r){throw console.log(r),r}}export{i as c,u as g};
